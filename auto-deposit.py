@@ -15,7 +15,7 @@ def msg(log):
 
 msg("Getting balance...")
 print("Getting balance...")
-b = subprocess.run('./ironfish accounts:balance',
+b = subprocess.run('ironfish accounts:balance',
                    shell=True,
                    stdout=subprocess.PIPE)
 if b.returncode != 0:
@@ -33,7 +33,7 @@ if float(available) < 0.10000001:
 print("Trying to make deposit...")
 msg("Trying to make deposit...")
 c = subprocess.run(
-    './ironfish deposit --confirm',
+    'ironfish deposit --confirm',
     shell=True,
     stdout=subprocess.PIPE)
 if c.returncode == 0:
